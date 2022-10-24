@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Article{% endblock %}
+{% block title %}BDE SUPINFO CAEN - {{ article.title }}{% endblock %}
 
 {% block body %}
     {% for message in app.flashes('success') %}
@@ -57,11 +57,11 @@
     {% endif %}
     <hr>
 
-    <a class="btn btn-primary" href="{{ path('app_article_index') }}"><i class="bi bi-arrow-left-square-fill me-1"></i> back to list</a>
+    <a class="btn btn-primary" href="{{ path('app_article_index') }}"><i class="bi bi-arrow-left-square-fill me-1"></i> Retour</a>
 
     <div>
         <div>
-            <h2>Comments <span class="badge bg-secondary mt-5 mb-2">{{ article.comment|length }}</span></h2>
+            <h2>Commentaires <span class="badge bg-secondary mt-5 mb-2">{{ article.comment|length }}</span></h2>
 
             {% for comment in article.comment %}
                 {% if comment.parent == null %}

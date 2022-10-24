@@ -1,9 +1,9 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Contact{% endblock %}
+{% block title %}BDE SUPINFO CAEN - Contact{% endblock %}
 
 {% block body %}
-<h1>Contact us</h1>
+<h1>Nous contacter</h1>
 
     {% for message in app.flashes('success') %}
         
@@ -21,8 +21,8 @@
         {{ form_row(form.email) }}
         {{ form_row(form.message) }}
 
-        <button type="submit" class="btn btn-success">
-            Send
+        <button type="submit" class="btn btn-primary">
+            Envoyer
             <i class="bi bi-send-fill ms-1"></i>
         </button>
     {{ form_end(form) }}

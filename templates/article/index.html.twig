@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Article index{% endblock %}
+{% block title %}BDE SUPINFO CAEN - Articles{% endblock %}
 
 {% block body %}
     <h1>Articles</h1>
@@ -30,8 +30,10 @@
                             </p>
                         </div>
                         <p class="card-text mb-auto text-wrap" style="width: 23rem;">{{ article.shortdescription }}...</p>
-                        <a href="{{ path('app_article_show', {'id': article.id}) }}">Continue reading</a>
-                        <a class="btn btn-primary btn-sm" href="{{ path('app_article_edit', {'id': article.id}) }}"><i class="bi bi-pencil-fill"></i></a>
+                        <a href="{{ path('app_article_show', {'id': article.id}) }}">En savoir plus</a>
+                        {% if is_granted("ROLE_ADMIN") %}
+                            <a class="btn btn-primary btn-sm" href="{{ path('app_article_edit', {'id': article.id}) }}"><i class="bi bi-pencil-fill"></i></a>
+                        {% endif %}
                     </div>
                     {% if vich_uploader_asset(article, 'imageFile') %}
                         <div class="card-img-right flex-auto d-none d-md-block" style="width: 200px; height: 250px; background: url('{{ vich_uploader_asset(article, 'imageFile')|imagine_filter('article_thumbnail') }}') no-repeat center;background-size: cover;"></div>
