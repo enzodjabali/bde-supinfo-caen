@@ -33,33 +33,34 @@ class ArticleType extends AbstractType
                     'style' => 'height: 200px'
                 ]
             ])
-            // ->add('imageFile', VichImageType::class, [
-            //     'label' => 'Illustration (Do not use : bug)',
-            //     'required' => false,
-            //     'download_label' => false,
-            //     'delete_label' => 'Remove Image',
-            //     'imagine_pattern' => 'article_form',
+            ->add('imageFile', VichImageType::class, [
+                'label' => 'Illustration (Do not use : bug)',
+                'required' => false,
+                'download_label' => false,
+                'delete_label' => 'Remove Image',
+                'imagine_pattern' => 'article_form',
                 
-            //     'label_attr' => [
-            //         'class' => 'form-label mt-4',
-            //     ],
+                'label_attr' => [
+                    'class' => 'form-label mt-4',
+                ],
 
-            //     'attr' => [
-            //         'accept' => 'image/*'
-            //     ],
+                'attr' => [
+                    'accept' => 'image/*'
+                ],
 
-            //     'constraints' => [
-            //         new File([
-            //             'maxSize' => '5M',
-            //             'mimeTypes' => [
-            //                 'image/jpeg',
-            //                 'image/png',
-            //             ]
-            //         ])
-            //     ]
-            // ])
+                'constraints' => [
+                    new File([
+                        'maxSize' => '5M',
+                        'mimeTypes' => [
+                            'image/jpeg',
+                            'image/png',
+                        ]
+                    ])
+                ]
+            ])
             ->add('imagePublicPath', TextType::class, [
                 'label' => 'Thumbnail image link',
+                'required'   => false,
                 'attr' => [
                     'maxlength' => 500
                 ]
