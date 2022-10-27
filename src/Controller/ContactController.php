@@ -27,7 +27,7 @@ class ContactController extends AbstractController
             // Send email
             $subject = 'BDE SUPINFO CAEN';
             $mailer->sendEmail(
-                from: '',
+                from: 'enzo@djabali.fr',
                 to: 'enzo.djabali@supinfo.com',
                 subject: $subject,
                 htmlTemplate: 'email/contact/index.html.twig',
