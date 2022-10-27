@@ -25,10 +25,10 @@ class ContactController extends AbstractController
             assert(is_string($contactMessage));
 
             // Send email
-            $subject = 'Someone has reached you';
+            $subject = 'BDE SUPINFO CAEN';
             $mailer->sendEmail(
-                from: 'myself@myapp.lan',
-                to: 'myself@myapp.lan',
+                from: 'enzo@djabali.fr',
+                to: 'enzo.djabali@supinfo.com',
                 subject: $subject,
                 htmlTemplate: 'email/contact/index.html.twig',
                 

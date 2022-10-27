@@ -27,7 +27,7 @@ class MailerService
         ): void
     {
         $email = (new TemplatedEmail())
-            ->from('support@bde-supinfo-caen.fr')
+            ->from('enzo@djabali.fr')
             ->to($to)
             //->cc('cc@example.com')
             //->bcc('bcc@example.com')
