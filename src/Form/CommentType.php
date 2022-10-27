@@ -19,7 +19,7 @@ class CommentType extends AbstractType
                 'label' => false,
                 'attr' => [
                     'style' => 'height: 150px',
-                    'placeholder' => 'Write a constructive comment here...'
+                    'placeholder' => 'Je rédige mon commentaire...'
                 ]
             ])
             ->add('parent_id', HiddenType::class, [

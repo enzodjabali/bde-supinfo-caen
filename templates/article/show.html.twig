@@ -108,7 +108,7 @@
         {% if app.user %}
             <hr>
             <div id="add-comment">
-                <h2 id="reply-title">Write a comment</h2>
+                <h2 id="reply-title">Ajouter un commentaire</h2>
                 <div id="reply-section"></div>
                 {{ form(commentForm) }}
             </div>
@@ -146,7 +146,7 @@
         // Close reply
         function closeReply() {
             document.getElementById('reply').innerHTML = '';
-            document.getElementById('reply-title').innerHTML = 'Write a comment';
+            document.getElementById('reply-title').innerHTML = 'Ajouter un commentaire';
             document.querySelector('#comment_parent_id').value = null;
             document.getElementById('comment').classList.remove('ms-5');
         }

@@ -34,7 +34,7 @@ class ArticleType extends AbstractType
                 ]
             ])
             ->add('imageFile', VichImageType::class, [
-                'label' => 'Illustration',
+                'label' => 'Illustration (Do not use : bug)',
                 'required' => false,
                 'download_label' => false,
                 'delete_label' => 'Remove Image',
