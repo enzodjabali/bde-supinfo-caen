@@ -33,9 +33,11 @@
         </div>
     {% endif %}
 
+    {#
     {% if vich_uploader_asset(article, 'imageFile') %}
         <img class="mb-2 img-fluid" src="{{ vich_uploader_asset(article, 'imageFile')|imagine_filter('article') }}">
     {% endif %}
+    #}
 
     <p>
         {% if article.category == 'Event' %}

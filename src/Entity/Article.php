@@ -37,6 +37,9 @@ class Article
     #[ORM\Column(type: 'string', nullable: true)]
     private ?string $imageName = null;
 
+    #[ORM\Column(type: 'string', nullable: true)]
+    private ?string $imagePublicPath = null;
+
     #[ORM\Column(type: 'date')]
     private ?\DateTimeInterface $publicationDate;
 
@@ -116,6 +119,16 @@ class Article
     public function getImageName(): ?string
     {
         return $this->imageName;
+    }
+
+    public function setImagePublicPath(?string $imagePublicPath): void
+    {
+        $this->imagePublicPath = $imagePublicPath;
+    }
+
+    public function getImagePublicPath(): ?string
+    {
+        return $this->imagePublicPath;
     }
 
     public function getPublicationDate(): ?\DateTimeInterface
