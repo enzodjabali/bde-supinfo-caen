@@ -48,18 +48,18 @@ class TodoController extends AbstractController
             assert(is_string($todoCurrentEmail));
 
             // Send email
-            $subject = 'New task added';
-            $mailer->sendEmail(
-                from: 'sender@myapp.lan',
-                to: 'receiver@myapp.lan',
-                subject: $subject,
-                htmlTemplate: 'email/todo/new.html.twig',
+            // $subject = 'New task added';
+            // $mailer->sendEmail(
+            //     from: 'sender@myapp.lan',
+            //     to: 'receiver@myapp.lan',
+            //     subject: $subject,
+            //     htmlTemplate: 'email/todo/new.html.twig',
                 
-                // Context
-                todoTodo: $todoTodo,
-                todoEmail: $todoEmail,
-                todoCurrentEmail: $todoCurrentEmail
-            );
+            //     // Context
+            //     todoTodo: $todoTodo,
+            //     todoEmail: $todoEmail,
+            //     todoCurrentEmail: $todoCurrentEmail
+            // );
 
             return $this->redirectToRoute('app_todo_index', [], Response::HTTP_SEE_OTHER);
         }
