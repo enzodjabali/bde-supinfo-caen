@@ -1,4 +1,4 @@
-## Symfony Cloud Temple Project
+## Symfony BDE SUPINFO CAEN
 
 <br>
 
@@ -46,12 +46,12 @@ sudo service docker restart
 
 Clone the project:
 ```bash
-git clone https://github.com/enzodjabali/symfo-ct-project
+git clone https://github.com/enzodjabali/bde-supinfo-caen
 ```
 
 Create and start containers:
 ```bash
-cd symfo-ct-project/ && docker-compose up
+cd bde-supinfo-caen/ && docker-compose up
 ```
 <br />
 
@@ -92,7 +92,7 @@ Congrats! You can now access your app server at `localhost:8080` 🎉
 
 Grant permissions to www-data (might solve cache errors from liip/imagine-bundle):
 ```bash
-sudo chown -R $USER:www-data symfo-ct-project/ && sudo chmod -R g+r+x+w symfo-ct-project/
+sudo chown -R $USER:www-data bde-supinfo-caen/ && sudo chmod -R g+r+x+w bde-supinfo-caen/
 ```
 
 Load fixtures with faker (in php container):
@@ -105,7 +105,7 @@ bin/console d:f:l
 
 Access PostgreSQL container:
 ```bash
-docker exec -it symfo-ct-project_database_1 sh
+docker exec -it bde-supinfo-caen_database_1 sh
 ```
 
 Connect to database:
