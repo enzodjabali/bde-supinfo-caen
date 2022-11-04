@@ -56,6 +56,10 @@ cd bde-supinfo-caen/ && docker-compose up
 <br />
 
 <b>Create a copy of the `.env` file then name it `.env.local` and fill it out</b>
+Database connection:
+```env
+DATABASE_URL="postgresql://symfony:PASSWORD@database:5432/app?serverVersion=13&charset=utf8"
+```
 
 <br />
 
